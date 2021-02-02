@@ -24,8 +24,9 @@ Route::post('/store-drink', 'MainController@store') -> name('store-drink');
 // Mostrare form per update 
 Route::get('/edit/drink/{id}', 'MainController@edit') -> name('edit-drink');
 // Update modifiche 
-Route::post('/update-drink', 'MainController@update') -> name('update-drink');
-
+Route::post('/update-drink/{id}', 'MainController@update') -> name('update-drink');
+// Update modifiche 
+Route::get('/delete-drink/{id}', 'MainController@delete') -> name('delete-drink');
 
 
 

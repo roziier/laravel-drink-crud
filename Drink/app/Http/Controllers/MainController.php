@@ -43,5 +43,12 @@ class MainController extends Controller
         $drink = Drink::findOrFail($id);
         $drink -> update($request -> all());
         return redirect() -> route('index-drink', $drink -> id);
-    } 
+    }
+
+    // cancellare un entità
+    public function delete($id) {
+        $drink = Drink::findOrFail($id);
+        $drink -> delete();
+        return redirect() -> route('index-drink');
+    }
 }

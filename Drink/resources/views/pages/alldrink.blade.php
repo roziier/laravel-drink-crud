@@ -9,7 +9,7 @@
             <a class="test" href="{{ route('show-drink', $drink -> id)}}">{{ $drink -> name }}</a>
             <div>  
               <a href="{{route('edit-drink', $drink -> id)}}" class="btn badge badge-primary">Edit</a>
-              <a href="" class="btn badge badge-primary">Delete</a>
+              <a href="{{route('delete-drink', $drink -> id)}}" class="btn badge badge-primary">Delete</a>
            </div>
         </li>
         @endforeach
